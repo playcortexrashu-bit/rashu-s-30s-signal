@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HPAE Pro Color King</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+  <div class="top-bar">
+    <h2>COLOR KING ANALYTICS</h2>
+  </div>
+
+  <div class="display-card">
+    <div class="value-section">
+      <div class="signal" id="signal">WAIT</div>
+      <div class="confidence" id="conf">0%</div>
+    </div>
+    <div class="number-predict" id="numCluster">— — —</div>
+    <div class="progress-bar">
+      <div class="fill" id="fill"></div>
+    </div>
+  </div>
+
+  <div class="analytics">
+    <div>ID> <span id="sessionId">0000</span></div>
+    <div>Size Bias: <span id="sizeBias">—</span></div>
+    <div>Volatility: <span id="volatility">—</span></div>
+  </div>
+  
+</div>
+
+<script src="engine.js"></script>
+<script>
+window.addEventListener("HPAE_SIGNAL", e => {
+  const {signal, conf, nums, vol, biasText} = e.detail;
+  document.getElementById("signal").innerText = signal;
+  document.getElementById("conf").innerText = conf + "%";
+  document.getElementById("numCluster").innerText = nums.join(" ");
+  document.getElementById("fill").style.width = conf + "%";
+  document.getElementById("sizeBias").innerText = biasText;
+  document.getElementById("volatility").innerText = vol.toFixed(2);
+});
+</script>
+
+</body>
+</html>
