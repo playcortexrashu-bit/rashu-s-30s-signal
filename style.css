@@ -1,0 +1,70 @@
+body{
+  background: #06091f;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+}
+
+.main-container{
+  width: 350px;
+  margin: 30px auto;
+  padding: 15px;
+  background: #0d1331;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #0a1c5f;
+}
+
+.top-bar h2{
+  text-align: center;
+  font-size: 22px;
+  color: #01dcff;
+  text-shadow: 0 0 12px #01dcff;
+}
+
+.display-card{
+  background: #1b2a69;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 12px;
+  text-align: center;
+  box-shadow: 0 0 16px #03fffa;
+}
+
+.signal{
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff4a4a;
+  text-shadow: 0 0 12px #ff4a4a;
+}
+
+.confidence{
+  font-size: 24px;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.progress-bar{
+  height: 10px;
+  background: #02082c;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+#fill{
+  width:0%;
+  height:100%;
+  background:#03fffa;
+  border-radius:6px;
+  box-shadow:0 0 8px #03fffa;
+}
+
+.number-predict{
+  font-size: 22px;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.analytics{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #87ceeb;
+}
